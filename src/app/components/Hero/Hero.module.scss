@@ -1,0 +1,142 @@
+.container {
+  background: url("hero-background.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 982px;
+  padding: 0 var(--padding-side);
+  margin-bottom: 112px;
+}
+
+.content {
+  padding-top: 210px;
+}
+
+.category {
+  display: flex;
+  flex-direction: row;
+}
+
+.category div {
+  background-color: var(--white);
+  position: relative;
+  padding: 6px 32px;
+  border-radius: 48px;
+  &::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: absolute;
+    left: 12px;
+    top: 11px;
+  }
+  &:nth-child(odd)::before {
+    background-color: var(--text-color);
+  }
+  &:nth-child(even)::before {
+    background-color: var(--accent);
+  }
+}
+
+.description {
+  position: relative;
+  width: 415px;
+  font-size: 74px;
+  margin-bottom: 71px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 138px;
+    height: 17px;
+    top: 64px;
+    right: 40px;
+    z-index: -1;
+    background-color: var(--accent);
+  }
+}
+
+.btnStarted {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  background: var(--black);
+  position: relative;
+  span {
+    position: relative;
+    z-index: 10;
+  }
+  &::after {
+    content: "";
+    width: 67px;
+    height: 8px;
+    position: absolute;
+    left: 71px;
+    bottom: 0;
+    background-color: var(--accent);
+  }
+  &:hover.btnStarted::after {
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+}
+
+.buttons,
+.buttons span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.buttons {
+  column-gap: 29px;
+  margin-bottom: 107px;
+}
+
+.playBtnText {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.playBtn {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(29, 29, 29, 0.22);
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1d1d1d;
+  }
+  &:hover.playBtn::after {
+    transform: scale(1.5);
+  }
+  img {
+    z-index: 10;
+  }
+}
+
+.imagesWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  column-gap: 20px;
+  img {
+    border-radius: 20px;
+    object-fit: contain;
+  }
+}
+
+.JoinWrapper {
+  background-color: var(--text-color);
+}
