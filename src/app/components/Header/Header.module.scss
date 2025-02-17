@@ -26,4 +26,8 @@
 
 .btnSign {
   border: 1px solid var(--white);
+  &:hover {
+    background-color: #fff;
+    color: black;
+  }
 }

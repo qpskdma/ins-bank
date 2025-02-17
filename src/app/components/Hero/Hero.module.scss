@@ -3,12 +3,15 @@
   background-position: right;
   background-repeat: no-repeat;
   height: 982px;
-  padding: 0 var(--padding-side);
+  padding-left: var(--padding-side);
   margin-bottom: 112px;
 }
 
 .content {
   padding-top: 210px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .category {
@@ -137,6 +140,129 @@
   }
 }
 
-.JoinWrapper {
+.joinWrapper {
+  width: 242px;
+  height: 97px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
   background-color: var(--text-color);
+  border-radius: 20px;
+  padding: 22px;
+  button {
+    max-width: 75px;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+}
+
+.joinText {
+  color: var(--background);
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+}
+
+.greenText {
+  display: flex;
+  flex-direction: row;
+  color: var(--accent);
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.textMini {
+  font-size: 24px;
+  position: relative;
+  top: 0;
+}
+
+.secondBlock {
+  width: 600px;
+  height: auto;
+  position: relative;
+  color: #ffff;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 43px;
+  padding-bottom: 2rem;
+  overflow: visible;
+}
+
+.ringBtn {
+  position: relative;
+  font-weight: 600;
+  color: var(--text-color);
+  background-color: var(--white);
+  border-radius: 46px;
+  padding-left: 52px;
+  z-index: 10;
+  &::after {
+    content: url("ring.svg");
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.secondTitle {
+  font-size: 4rem;
+  margin-bottom: 2.75rem;
+}
+
+.criteries {
+  display: flex;
+  align-items: center;
+  column-gap: 1.6rem;
+}
+
+.horizontal {
+  height: 2rem;
+  border-left: 1px solid #fff;
+}
+
+.parallaxCard,
+.activateAnimation {
+  overflow: visible;
+}
+
+.activateAnimation:hover .ringBtn {
+  box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 10px var(--accent),
+    0 0 15px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent),
+    0 0 55px var(--accent);
+}
+
+.activateAnimation:hover .parallaxCard {
+  > img {
+    &:nth-child(1) {
+      top: 0;
+      left: -40%;
+      transform: rotate(20deg);
+    }
+    &:nth-child(2) {
+      top: -5%;
+      left: -35%;
+      transform: rotate(10deg);
+    }
+  }
+}
+
+.parallaxCard > img {
+  position: absolute;
+  z-index: 1;
+  transition: left 0.5s ease, transform 0.5s ease, top 0.5s ease;
+  &:nth-child(3) {
+    left: -25%;
+    top: -10%;
+  }
+  &:nth-child(2) {
+    left: -45%;
+    top: 0;
+  }
+  &:nth-child(1) {
+    left: -65%;
+    top: 15%;
+  }
 }

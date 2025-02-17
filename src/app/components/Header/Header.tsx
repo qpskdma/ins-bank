@@ -4,7 +4,7 @@ const Header: React.FC = ({}) => {
   return (
     <header className={styles.header}>
       <div>
-        <img src="/icons/logo.svg" alt="InsBank" />
+        <img src="icons/logo.svg" alt="InsBank" />
       </div>
       <nav>
         <ul className={styles.navigation}>
